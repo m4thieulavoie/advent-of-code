@@ -2270,16 +2270,15 @@ items.forEach((str) => {
   }
 });
 
-let biggest = -1;
-cleanedItems.forEach((arrays) => {
-  const sum = arrays.reduce(
-    (acc, currentValue) => acc + Number(currentValue),
-    0
-  );
-  if (sum > biggest) {
-    biggest = sum;
-  }
-});
+const sums = cleanedItems
+  .map((items) =>
+    items.reduce((acc, currentValue) => acc + Number(currentValue), 0)
+  )
+  .sort((a, b) => b - a);
+console.warn({ sums });
 
+const biggest = sums[0];
+const threeBiggest = sums[0] + sums[1] + sums[2];
 console.warn({ biggest });
-addAnswerToDay(1, biggest);
+
+addAnswerToDay(1, biggest, threeBiggest);
