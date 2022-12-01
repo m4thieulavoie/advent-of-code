@@ -1,3 +1,5 @@
+import { addAnswerToDay } from "../utils/answer.js";
+
 const data = `5104
 6131
 3553
@@ -2280,3 +2282,4 @@ cleanedItems.forEach((arrays) => {
 });
 
 console.warn({ biggest });
+addAnswerToDay(1, biggest);

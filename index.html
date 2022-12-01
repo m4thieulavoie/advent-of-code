@@ -1,6 +1,64 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <style>
+      * {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+          "Segoe UI Symbol";
+      }
+
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        display: grid;
+        place-items: center;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      th,
+      td {
+        padding: 0.5rem 1rem;
+        border: 2px dashed rgba(0, 0, 0, 0.6);
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+
+      tbody tr:hover {
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+
+      a {
+        color: #000;
+      }
+
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
   <body>
-    <script src="./days/day-1.js"></script>
+    <main>
+      <h1>My answers 🤓</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Answer</th>
+            <th>Source</th>
+          </tr>
+        </thead>
+        <tbody id="days"></tbody>
+      </table>
+    </main>
+
+    <script type="module" src="./days/day-1.js"></script>
   </body>
 </html>
